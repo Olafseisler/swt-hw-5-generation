@@ -1,0 +1,33 @@
+GTv1 Verdict
+Pass: 22/22
+
+MTv1 Verdict
+Pass: 2/4
+
+
+MTv1 Equivalence classes
+
+testJuneToJuly
+Input: EC1 = month(last day of 30 day month)
+Output: EC2 = month(first day of next month)
+
+testMarchToApril
+Input: EC3 = month(last day of 31 day month)
+Output: EC4 = month(first day of next month)
+
+testDecemberToJanuary
+Input: EC5 = month_and_year(last day of the last valid year)
+Output: EC6 = invalid next year
+
+testLeapYear
+Input: EC7 = month_and_year(28th february of a leap year)
+Output: EC8 = month_and_year(29th february of the same leap year)
+
+
+GTv1 Equivalence classes
+
+
+
+
+
+
