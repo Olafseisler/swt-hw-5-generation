@@ -7,3 +7,15 @@ However, the actual output value of the failure in "testDecemberToJanuary" chang
 
 Both line and branch coverage for GTv1 remained the same, while MTv1 line coverage increased from 66% to 73%
 (branch coverage increased only by 1%).
+See images in the folder Screenshots.
+
+2.2
+After correcting the faulty line of code that caused "testDecemberToJanuary" to fail, we now have NDv21.
+The newly generated test suite GTv12 has higher coverage compared to the previous GTv1:
+line coverage is now 100% (12% higher) and branch coverage is 98% (5% higher). The number of tests in the test suite
+increased by 1 and all 23 tests pass.
+Equivalence classes covered by GTv12 are EC1, EC2, EC3, EC4, EC5, EC6, EC7, EC8, EC9, EC10, EC11,
+meaning it covers two additional classes compared to GTv1: EC10 and EC11.
+This actually gives more incorrect outputs without marking them as invalid, but then again the program tested is faulty.
+However, that means it is now easier for the human tester to find those faults when inspecting the generated tests
+since these now have a wider range of values.
