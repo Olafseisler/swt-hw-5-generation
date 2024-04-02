@@ -1,0 +1,6 @@
+1. We notice that one of the test for GTv2 fails because it tries to cover the lines
+that were commented out with the input date 2/29/1801. MTv1 still runs perfectly.
+
+2. There isn't much surprising as the correct output is returned for the input date 2/29/1801 and
+all tests in both suites pass. However, line coverage for MTv1 drops from 70% to 69% when using the
+correct refactoring.
