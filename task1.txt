@@ -32,7 +32,7 @@ While manually written tests (MTv1) are very few compared to the automatically g
 they find faults that the generated ones do not. This happens despite the fact that the MTv1 only has
 66% line coverage and 55% branch coverage, while GTv1 has 88% line coverage and 93% branch coverage.
 See images in the folder Screenshots.
-It is obvious that manually writing tests are thougt through more and take into account knowledge about
+It is obvious that manually writing tests are thought through more and take into account knowledge about
 the domain and thus additional boundary values.
 
 

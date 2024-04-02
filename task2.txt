@@ -1,0 +1,9 @@
+2.1
+After correcting the line that contained the fault causing the failure of "testDecemberToJanuary" in task 1
+as instructed, the number of passed and failed tests remain the same:
+GTv1 Verdict: Pass: 22/22;
+MTv1 Verdict: Pass: 2/4.
+However, the actual output value of the failure in "testDecemberToJanuary" changed from "12/32/2021" to "1/1/2022".
+
+Both line and branch coverage for GTv1 remained the same, while MTv1 line coverage increased from 66% to 73%
+(branch coverage increased only by 1%).
