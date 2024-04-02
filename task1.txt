@@ -1,32 +1,39 @@
+EQUIVALENCE CLASSES
+
+Input:
+EC1 - Day in range [1...31] (valid)
+EC2 - Day not in range [1...31] (invalid)
+EC2.1 - Day not an integer (invalid)
+EC3 - Month in range [1, 12] (valid)
+EC4 - Month not in range [1, 12] (invalid)
+EC4.1 - Month not an integer (invalid)
+EC5 - Year in range [1801, 2021] (valid)
+EC6 - Year not in range [1801, 2021] (invalid)
+EC6.1 - Year not an integer (invalid)
+
+Output:
+EC7 - Correct date in range [1/2/1801, 12/31/2021] (valid)
+EC8 - "invalid Input Date" (invalid)
+EC9 - "Invalid Input Date" (invalid)
+EC10 - "Invalid Next Year" (invalid)
+EC11 - Incorrect date in range [1/2/1801, 12.31.2021] (invalid)
+EC12 - Date not in range [1/2/1801, 12/31/2021] (invalid)
+
 GTv1 Verdict
 Pass: 22/22
+Covers: EC1, EC2, EC3, EC4, EC5, EC6, EC7, EC8, EC9,
 
 MTv1 Verdict
 Pass: 2/4
+Covers: EC1, EC3, EC5, EC10,
 
-
-MTv1 Equivalence classes
-
-testJuneToJuly
-Input: EC1 = month(last day of 30 day month)
-Output: EC2 = month(first day of next month)
-
-testMarchToApril
-Input: EC3 = month(last day of 31 day month)
-Output: EC4 = month(first day of next month)
-
-testDecemberToJanuary
-Input: EC5 = month_and_year(last day of the last valid year)
-Output: EC6 = invalid next year
-
-testLeapYear
-Input: EC7 = month_and_year(28th february of a leap year)
-Output: EC8 = month_and_year(29th february of the same leap year)
-
-
-GTv1 Equivalence classes
-
-
+Discussion:
+While manually written tests (MTv1) are very few compared to the automatically generated ones (GTv1),
+they find faults that the generated ones do not. This happens despite the fact that the MTv1 only has
+66% line coverage and 55% branch coverage, while GTv1 has 88% line coverage and 93% branch coverage.
+See images in the folder Screenshots.
+It is obvious that manually writing tests are thougt through more and take into account knowledge about
+the domain and thus additional boundary values.
 
 
 
