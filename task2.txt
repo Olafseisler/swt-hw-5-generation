@@ -19,3 +19,4 @@ meaning it covers two additional classes compared to GTv1: EC10 and EC11.
 This actually gives more incorrect outputs without marking them as invalid, but then again the program tested is faulty.
 However, that means it is now easier for the human tester to find those faults when inspecting the generated tests
 since these now have a wider range of values.
+See images in the folder Screenshots.

@@ -1,0 +1,18 @@
+After creating NDv2 by including the leap year functionality, we ran the tests in MTv1 and GTv12.
+As expected, the line and branch coverage for both test suites have decreased, compared to running the tests
+on NextDate version NDv1, which had fewer lines of code.
+All 4 of the MTv1 tests now pass but GTv12 now has 1 failed test (out of 23):
+the test "testRunReturningNonEmptyString" previously considered the output value "3/1/2000" to be valid,
+which of course is not correct for the leap year date "2/28/2000", and now it flags the test as having failed.
+It is obvious we need to generate a new test suite to take the added functionality into account.
+
+// The instructions didn't mention whether we should correct this test or not,
+// so we decided it makes more sense to not correct it and keep it for the comparison in the next step.
+
+The new test suite GTv2 has higher line and branch coverage than the suite GTv12:
+line coverage is 6% higher and branch coverage is 2% higher. There are also a few more tests and none of the tests fail.
+GTv2 covers the equivalence classes EC1, EC2, EC3, EC4, EC5, EC6, EC7, EC8, EC9, EC10, EC11 - same as GTv12,
+but there is actually an improvement: GTv12 marks more incorrect outputs (EC11) as valid, while GTv2 continues
+with marking only the incorrectly calculated July's dates as valid (courtesy of faulty code in the NextDate.java).
+
+See images in the folder Screenshots.
